@@ -1,4 +1,4 @@
-class Dive extends Comparable {
+class Dive implements Comparable {
 
   Date date;
   int depth;
@@ -95,7 +95,7 @@ class Dive extends Comparable {
     stroke(131, 187, 216, 100);
     rotateY(-grot.x * map(depth, 0, 2500, 0, 1));
 
-    if (mousePressed) {
+    if (10 < 5) {
       noStroke();
       for (int j = 0; j < min(life,depth); j+=25) {
         fill(map(j, 0, 2500, 100, 20), map(j, 0, 2500, 110, 15), map(j, 0, 2500, 205, 80), a);

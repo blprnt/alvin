@@ -10,7 +10,7 @@ PVector rot = new PVector();
 PVector trot = new PVector();
 
 float depthMag = 1;
-float tdepthMag = 1;
+float tdepthMag = 0.1;
 
 PVector minLonLat = new PVector(1000,1000);
 PVector maxLonLat = new PVector(-1000,-1000);
@@ -18,7 +18,7 @@ PVector maxLonLat = new PVector(-1000,-1000);
 ArrayList<XBTSequence> sequences = new ArrayList();
 void setup() {
   size(displayWidth, displayHeight, P3D);
-  for (int i = 0; i < 11; i++) {
+  for (int i = 0; i < 21; i++) {
     loadXBT("T7_" + nf(i, 5) + ".EDF");
   }
   arrangeRows();

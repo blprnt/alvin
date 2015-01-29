@@ -48,7 +48,7 @@ int filterIndex = 0;
 float totalDepth = 0;
 
 void setup() {
-  size(590 * 2, 442 * 2, P3D); 
+  size(1280,720, P3D); 
 
   sc = (float) height / osize;
 
@@ -167,6 +167,8 @@ void draw() {
   text("DIVES", width/2, height/2 + 24 + 5);
 
   image(canvas, 0, 0);
+  
+  saveFrame("frames/alvin-######.png");
 }
 
 void filterDives(String f) {
@@ -315,6 +317,7 @@ void keyPressed() {
       
   }
   if (keyCode == RIGHT) {
+    dc = 0;
     diveCount = 0;
     filterIndex ++;
     if (filterIndex == filters.length) filterIndex = 0;

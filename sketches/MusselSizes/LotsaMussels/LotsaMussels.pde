@@ -74,7 +74,7 @@ class Mussel implements Comparable{
     pushMatrix();
       translate(pos.x, pos.y, pos.z);
       //box(dims.x, dims.y, dims.z);
-      musselShell(1, dims.y);
+      musselShell(10, dims.y);
     popMatrix();
   }
   
@@ -88,6 +88,7 @@ class Mussel implements Comparable{
 void musselShell(int seed, float r) {
   pushMatrix();
   randomSeed(seed);
+  noStroke();
  float distort = random(0.8,1.2);
   for(int i = 0; i < 10; i++) {
     fill(map(i, 0, 10, 100, 255));
